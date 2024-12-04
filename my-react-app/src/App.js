@@ -1,23 +1,16 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './action';
-import PasswordGenerator from './PasswordGenerator';
-import TodoList from './TodoList'
 import './App.css';
+// import PasswordGenerator from './component/PasswordGenerator';
+// import TodoList from './component/TodoList'
+import Counter from './component/Counter';
 
 function App() {
-  const count = useSelector((state) => state.count)
-  const dispatch = useDispatch();
+
   return (
     <div className="App">
-      <TodoList />
+      <Counter />
+      {/* <TodoList /> */}
       {/* <PasswordGenerator /> */}
-      {/*
-      // Counter application
-       <h2>{count}</h2>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button> 
-      */}
     </div>
   );
 }
